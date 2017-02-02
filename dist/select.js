@@ -828,7 +828,8 @@ uis.controller('uiSelectCtrl',
           return true;
         };
 
-    ctrl.searchInput.css('width', '10px');
+    // This causes bugs in mobile
+    // ctrl.searchInput.css('width', '10px');
     $timeout(function() { //Give tags time to render correctly
       if (sizeWatch === null && !updateIfVisible(calculateContainerWidth())) {
         sizeWatch = $scope.$watch(function() {
